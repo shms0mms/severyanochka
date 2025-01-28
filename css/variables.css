@@ -1,0 +1,14 @@
+:root {
+	--padding: 15;
+	--container: 1208;
+	--font: "Rubik", sans-serif;
+
+	/* Цвета */
+	--foreground: #414141;
+	--green: #70c05b;
+	--primary: #ff6633;
+	--light: #bfbfbf;
+	--background: #fbf8ec;
+	--white: #fff;
+	--black: #000;
+}

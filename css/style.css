@@ -7,9 +7,9 @@ body {
 }
 
 .container {
-	max-width: var(--container) + (var(--padding) * 2) + px;
+	max-width: calc(var(--container) + (var(--padding) * 2));
 	margin: 0 auto;
-	padding: 0 var(--padding) + px;
+	padding: calc(0 var(--padding));
 }
 
 body {

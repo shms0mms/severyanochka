@@ -11,16 +11,90 @@
 			name="keywords"
 			content="северяночка, магазин, по доставке, продукты, доставка, от 1000₽, бесплатно"
 		/>
-		<link rel="stylesheet" href="css/variables.css" />
-		<link rel="stylesheet" href="css/nullstyles.css" />
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="./css/variables.css" />
+		<link rel="stylesheet" href="./css/nullstyles.css" />
+		<link rel="stylesheet" href="./css/style.css" />
 		<title>Северяночка</title>
 	</head>
 	<body>
 		<div class="wrapper">
-			<header class="header"></header>
+			<header class="header">
+				<div class="container">
+					<div class="header__body">
+						<a href="index.html" class="header__logo">
+							<img src="img/logo.svg" alt="Северяночка" />
+						</a>
+						<!-- Каталог -->
+						<div data-spollers class="header__catalog catalog">
+							<button data-spoller class="catalog__button" type="button">
+								<div class="burger">
+									<span class="burger__line burger__line--top"></span
+									><span class="burger__line burger__line--middle"></span
+									><span class="burger__line burger__line--bottom"></span>
+								</div>
+								Каталог
+							</button>
+							<ul class="catalog__list">
+								<li>Молоко</li>
+							</ul>
+						</div>
+						<!--  -->
+
+						<!-- Поиск -->
+						<form action="#" method="get" class="header__search search">
+							<input
+								type="text"
+								name="term"
+								placeholder="Найти товар"
+								class="search__field"
+							/>
+							<button class="search__button" type="submit">
+								<img src="img/icons/search.svg" alt="Поиск" />
+							</button>
+						</form>
+						<!--  -->
+
+						<!-- Actions -->
+						<div class="header__actions actions">
+							<ul class="actions__list">
+								<li class="actions__item">
+									<a href="#" class="actions__link">
+										<img src="img/icons/actions/01.svg" alt="01" />
+										<span class="actions__text">Избранное</span></a
+									>
+								</li>
+								<li class="actions__item">
+									<a href="#" class="actions__link">
+										<img src="img/icons/actions/02.svg" alt="02" />
+										<span class="actions__text">Заказы</span></a
+									>
+								</li>
+								<li data-count="1" class="actions__item">
+									<a href="#" class="actions__link">
+										<img src="img/icons/actions/03.svg" alt="03" />
+										<span class="actions__text">Корзина</span></a
+									>
+								</li>
+							</ul>
+						</div>
+						<!--  -->
+
+						<!-- Личный кабинет (ЛК) -->
+						<div data-spollers class="header__account account">
+							<img src="img/avatar.jpg" alt="avatar" class="account__avatar" />
+							<div class="account__name">Алексей</div>
+							<button class="account__button" type="button" data-spoller>
+								<img src="img/icons/arrow-down.svg" alt="arrow-down" />
+							</button>
+						</div>
+						<!--  -->
+					</div>
+				</div>
+			</header>
 			<main class="page"></main>
 			<footer class="footer"></footer>
 		</div>
+		<script src="./js/spoller.js"></script>
+		<script src="./js/main.js"></script>
 	</body>
 </html>

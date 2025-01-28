@@ -1,5 +1,10 @@
 /* Шрифт */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+@import "./variables.css";
+@import "./nullstyles.css";
+@import "./header.css";
+@import "./burger.css";
 html,
 body {
 	width: 100%;
@@ -9,11 +14,27 @@ body {
 .container {
 	max-width: calc(var(--container) + (var(--padding) * 2));
 	margin: 0 auto;
-	padding: calc(0 var(--padding));
+	padding: 0 var(--padding);
 }
 
 body {
 	background: var(--background);
 	color: var(--foreground);
 	font-family: var(--font);
+	font-size: var(--default-size);
+}
+
+.button {
+	background-color: var(--green);
+	color: var(--white);
+	border-radius: 4px;
+	padding: 10px 14px;
+}
+
+.field {
+	border: 1px solid var(--green);
+	color: var(--gray);
+
+	border-radius: 4px;
+	padding: 8px 16px;
 }

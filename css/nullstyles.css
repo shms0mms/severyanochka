@@ -131,3 +131,14 @@ button {
 	margin: 0;
 	cursor: pointer;
 }
+
+input {
+	outline: none;
+	border: none;
+	appearance: none;
+}
+
+a {
+	color: var(--foreground);
+	text-decoration: none;
+}

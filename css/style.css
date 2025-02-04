@@ -4,6 +4,7 @@
 @import "./variables.css";
 @import "./nullstyles.css";
 @import "./header.css";
+@import "./mobile-navbar.css";
 @import "./burger.css";
 
 html,

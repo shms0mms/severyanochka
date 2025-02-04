@@ -6,6 +6,8 @@
 @import "./header.css";
 @import "./mobile-navbar.css";
 @import "./burger.css";
+@import "./home-sections/product.css";
+@import "./home-sections/products.css";
 
 html,
 body {
@@ -32,10 +34,27 @@ body {
 	border-radius: 4px;
 	padding: 10px 14px;
 }
+.button-outline {
+	background-color: transparent;
+	color: var(--green);
+	border: 1px solid var(--green);
+	transition: all 0.3s;
+}
+.button-outline:hover {
+	background-color: var(--primary);
+	color: var(--white);
+	border: 1px solid var(--primary);
+}
 
 .field {
 	border: 1px solid var(--green);
 	color: var(--gray);
 	border-radius: 4px;
 	padding: 8px 16px;
+}
+
+.title {
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 54px;
 }

@@ -13,7 +13,10 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/home-page.css" />
-    <script src="https://api-maps.yandex.ru/v3/?apikey=4d05e1b4-2ecf-4307-b890-cfcb2bfbeda5&lang=ru_RU"></script>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=986d3b28-31ba-4d84-a902-6e0356fbd76c&lang=ru_RU"
+      type="text/javascript"
+    ></script>
     <title>Северяночка</title>
   </head>
   <body>
@@ -258,11 +261,31 @@
                 </li>
               </ul>
 
-              <div>
-                <div data-tab-content="п.Щельяюр">a</div>
-                <div data-tab-content="д.Вертеп">b</div>
-                <div data-tab-content="с.Краснобор">c</div>
-                <div data-tab-content="д.Диюр">d</div>
+              <div class="maps__container">
+                <div
+                  id="b1-map"
+                  data-tab-content="п.Щельяюр"
+                  style="width: 1208px !important; height: 354px !important"
+                  class="maps__map"
+                ></div>
+                <div
+                  id="b2-map"
+                  data-tab-content="д.Вертеп"
+                  style="width: 1208px !important; height: 354px !important"
+                  class="maps__map"
+                ></div>
+                <div
+                  id="b3-map"
+                  data-tab-content="с.Краснобор"
+                  style="width: 1208px !important; height: 354px !important"
+                  class="maps__map"
+                ></div>
+                <div
+                  id="b4-map"
+                  data-tab-content="д.Диюр"
+                  style="width: 1208px !important; height: 354px !important"
+                  class="maps__map"
+                ></div>
               </div>
             </div>
           </div>
@@ -300,6 +323,7 @@
       </nav>
     </div>
     <script src="./js/main.js" type="module"></script>
+    <script src="./js/maps.js" type="module"></script>
     <script src="./js/products.js" type="module"></script>
   </body>
 </html>

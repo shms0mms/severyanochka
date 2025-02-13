@@ -21,3 +21,7 @@
   --maps-tab-button-background: var(--green);
   --maps-tab-button-foreground: #fff;
 }
+
+.maps__container {
+  padding-top: 20px;
+}

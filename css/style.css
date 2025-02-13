@@ -5,7 +5,7 @@
 @import "./nullstyles.css";
 @import "./header.css";
 @import "./mobile-navbar.css";
-@import "./burger.css";
+@import "./primitives/index.css";
 @import "./home-sections/product.css";
 @import "./home-sections/products.css";
 
@@ -62,4 +62,8 @@ body {
 .swiper {
   width: min(var(--container), 100vw);
   overflow: hidden;
+}
+
+.page-section {
+  padding-top: 80px;
 }

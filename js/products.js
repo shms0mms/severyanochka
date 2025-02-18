@@ -1,71 +1,72 @@
-const productsEl = document.querySelector(".products__items")
+const productsEl = document.querySelector(".products__items");
 
 const mockProducts = [
-  {
-    id: 1,
-    title: "Г/Ц Блинчики с мясом вес, Россия",
-    priceWithCard: "44,50 ₽",
-    price: "50,50 ₽",
-    image: "img/products/01.jpg",
-    discount: "-50%",
-    rating: 2, // 0 - 5
-  },
-  {
-    id: 2,
-    title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
-    priceWithCard: "44,50 ₽",
-    price: "50,50 ₽",
-    image: "img/products/02.png",
-    discount: "-50%",
-    rating: 3, // 0 - 5
-  },
-  {
-    id: 3,
-    title: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...",
-    priceWithCard: "44,50 ₽",
-    price: "50,50 ₽",
-    image: "img/products/03.png",
-    discount: "-50%",
-    rating: 5, // 0 - 5
-  },
-  {
-    id: 4,
-    title: "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...",
-    priceWithCard: "44,50 ₽",
-    price: "50,50 ₽",
-    image: "img/products/04.png",
-    discount: "-50%",
-    rating: 4, // 0 - 5
-  },
-]
+	{
+		id: 1,
+		title: "Г/Ц Блинчики с мясом вес, Россия",
+		priceWithCard: "44,50 ₽",
+		price: "50,50 ₽",
+		image: "img/products/01.jpg",
+		discount: "-50%",
+		rating: 2, // 0 - 5
+	},
+	{
+		id: 2,
+		title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
+		priceWithCard: "44,50 ₽",
+		price: "50,50 ₽",
+		image: "img/products/02.png",
+		discount: "-50%",
+		rating: 3, // 0 - 5
+	},
+	{
+		id: 3,
+		title: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...",
+		priceWithCard: "44,50 ₽",
+		price: "50,50 ₽",
+		image: "img/products/03.png",
+		discount: "-50%",
+		rating: 5, // 0 - 5
+	},
+
+	{
+		id: 4,
+		title: "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...",
+		priceWithCard: "44,50 ₽",
+		price: "50,50 ₽",
+		image: "img/products/04.png",
+		discount: "-50%",
+		rating: 4, // 0 - 5
+	},
+];
 
 function renderProducts() {
-  const products = mockProducts
+	const products = mockProducts;
 
-  products.map(product => {
-    const productEl = document.createElement("li")
+	products.map((product) => {
+		const productEl = document.createElement("li");
 
-    productEl.classList.add("products__item", "product")
-    productEl.innerHTML = productTemplate(product)
+		productEl.classList.add("products__item", "product");
+		productEl.innerHTML = productTemplate(product);
 
-    productsEl.appendChild(productEl)
-  })
+		productsEl.appendChild(productEl);
+	});
 }
 
 function productTemplate(product) {
-  let rating = product.rating
-  const ratingHTML = `
+	let rating = product.rating;
+	const ratingHTML = `
 	${Array.from({ length: 5 })
-    .map(() => {
-      rating--
+		.map(() => {
+			rating--;
 
-      return `<img src='img/icons/products/star${
-        rating >= 0 ? "-active" : ""
-      }.svg' alt='★' />`
-    })
-    .join("")}`
+			return `<img src='img/icons/products/star${
+				rating >= 0 ? "-active" : ""
+			}.svg' alt='★' />`;
+		})
+		.join("")}`;
 
-  return `
+	return `
 <div class="product__header">
 	<img
 		class="product__image"
@@ -107,7 +108,7 @@ function productTemplate(product) {
 		В корзину
 	</button>
 </div>
-`
+`;
 }
 
-renderProducts()
+renderProducts();

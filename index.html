@@ -13,6 +13,10 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/home-page.css" />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=986d3b28-31ba-4d84-a902-6e0356fbd76c&lang=ru_RU"
+      type="text/javascript"
+    ></script>
     <title>Северяночка</title>
   </head>
   <body>
@@ -156,7 +160,7 @@
         </div>
       </header>
       <main class="page">
-        <section class="page__section hero">
+        <section class="page-section page__section hero">
           <div class="container">
             <img
               class="hero__image"
@@ -167,7 +171,7 @@
           </div>
         </section>
 
-        <section class="page__products products">
+        <section class="page-section page__products products">
           <div class="container">
             <div class="products__header">
               <h2 class="products__title title">Акции</h2>
@@ -176,9 +180,114 @@
               /></a>
             </div>
 
-            <ul class="products__items">
-              <!-- Продукты -->
-            </ul>
+            <div class="swiper">
+              <ul class="products__items swiper-wrapper discount-products">
+                <!-- Продукты -->
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="page-section page__products products">
+          <div class="container">
+            <div class="products__header">
+              <h2 class="products__title title">Новинки</h2>
+              <a href="#" class="products__link"
+                >Все новинки
+                <img src="img/icons/arrow-right.svg" alt="Все новинки"
+              /></a>
+            </div>
+
+            <div class="swiper">
+              <ul class="products__items swiper-wrapper new-products">
+                <!-- Продукты -->
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="page-section page__products products">
+          <div class="container">
+            <div class="products__header">
+              <h2 class="products__title title">Покупали раньше</h2>
+              <a href="#" class="products__link"
+                >Все покупки
+                <img src="img/icons/arrow-right.svg" alt="Все покупки"
+              /></a>
+            </div>
+            <div class="swiper">
+              <ul class="products__items swiper-wrapper sold-before-products">
+                <!-- Продукты -->
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="page-section page__maps maps">
+          <div class="container">
+            <div class="products__header">
+              <h2 class="maps__title title">Наши магазины</h2>
+            </div>
+            <div data-tabs>
+              <ul class="maps__tabs">
+                <li class="maps__tab">
+                  <button
+                    class="maps__tab-button button"
+                    data-tab-trigger="п.Щельяюр"
+                  >
+                    п.Щельяюр
+                  </button>
+                </li>
+                <li class="maps__tab">
+                  <button
+                    class="maps__tab-button button"
+                    data-tab-trigger="д.Вертеп"
+                  >
+                    д.Вертеп
+                  </button>
+                </li>
+                <li class="maps__tab">
+                  <button
+                    class="maps__tab-button button"
+                    data-tab-trigger="с.Краснобор"
+                  >
+                    с.Краснобор
+                  </button>
+                </li>
+                <li class="maps__tab">
+                  <button
+                    class="maps__tab-button button"
+                    data-tab-trigger="д.Диюр"
+                  >
+                    д.Диюр
+                  </button>
+                </li>
+              </ul>
+
+              <div class="maps__container">
+                <div
+                  id="b1-map"
+                  data-tab-content="п.Щельяюр"
+                  style="width: 1208px !important; height: 354px !important"
+                  class="maps__map"
+                ></div>
+                <div
+                  id="b2-map"
+                  data-tab-content="д.Вертеп"
+                  style="width: 1208px !important; height: 354px !important"
+                  class="maps__map"
+                ></div>
+                <div
+                  id="b3-map"
+                  data-tab-content="с.Краснобор"
+                  style="width: 1208px !important; height: 354px !important"
+                  class="maps__map"
+                ></div>
+                <div
+                  id="b4-map"
+                  data-tab-content="д.Диюр"
+                  style="width: 1208px !important; height: 354px !important"
+                  class="maps__map"
+                ></div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
@@ -214,6 +323,7 @@
       </nav>
     </div>
     <script src="./js/main.js" type="module"></script>
+    <script src="./js/maps.js" type="module"></script>
     <script src="./js/products.js" type="module"></script>
   </body>
 </html>

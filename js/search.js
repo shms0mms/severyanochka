@@ -45,7 +45,8 @@ const handleSearch = () => {
 	if (searchResult.length) {
 		form.classList.add("active");
 		searchList.innerHTML = "";
-		searchResult.forEach((item) => {
+
+		searchResult.filter((item) => {
 			const highlightedItem = item.replace(
 				regex,
 				`<span class="highlight">$1</span>`

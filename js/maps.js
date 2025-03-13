@@ -1,3 +1,14 @@
+const REMOVE_MAP_CONTROLS = [
+  "geolocationControl",
+  "rulerControl",
+  "fullscreenControl",
+  "typeSelector",
+  "trafficControl",
+  "routeButton",
+  "searchControl",
+  "zoomControl",
+]
+
 async function initMap() {
   const maps = document.querySelectorAll(".maps__map[data-tab-content]")
 
@@ -11,17 +22,13 @@ async function initMap() {
         balloonDesc: `Республика Коми, ${map.getAttribute("data-tab-content")}`,
       })
 
-      myMap.controls.remove("geolocationControl")
-      myMap.controls.remove("rulerControl")
-      myMap.controls.remove("fullscreenControl")
-      myMap.controls.remove("typeSelector")
-      myMap.controls.remove("trafficControl")
-      myMap.controls.remove("routeButton")
-      myMap.controls.remove("searchControl")
-      myMap.controls.remove("zoomControl")
+      // Remove all unnecessary map controls
+      REMOVE_MAP_CONTROLS.map(control => myMap.controls.remove(control))
     })
   }
   ymaps.ready(initMaps)
 }
 
 initMap()
+
+// /product.html?product=Колбаса

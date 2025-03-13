@@ -67,3 +67,28 @@ body {
 .page-section {
   padding-top: 80px;
 }
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.milk-item {
+  grid-column: span 2;
+}
+
+.product-image-wrapper {
+  position: relative;
+}
+
+.discount {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+/* 
+<div class="product-image-wrapper">
+<img />
+<div class="discount" />
+</div> */

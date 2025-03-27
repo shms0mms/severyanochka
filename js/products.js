@@ -12,7 +12,6 @@ const mockProducts = [
     price: "50,50 ₽",
     image: "img/products/01.jpg",
     discount: "-50%",
-    inStock: false,
     rating: 2, // 0 - 5
   },
   {
@@ -154,7 +153,8 @@ renderProducts(mockProducts, newProductsEl)
 renderProducts(mockProducts, soldBeforeProductsEl)
 
 // Swiper
-new Swiper(".swiper", {
+
+const swiper = new Swiper(".swiper", {
   breakpoints: {
     300: {
       slidesPerView: 1.25,

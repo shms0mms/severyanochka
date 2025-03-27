@@ -4,6 +4,8 @@
 @import "./variables.css";
 @import "./nullstyles.css";
 @import "./header.css";
+@import "./footer.css";
+@import "./breadcrumbs.css";
 @import "./mobile-navbar.css";
 @import "./primitives/index.css";
 @import "./home-sections/product.css";
@@ -28,6 +30,14 @@ body {
   font-size: var(--default-size);
 }
 
+.input {
+  border-radius: 4px;
+  border: 1px solid var(--light);
+  color: var(--foreground);
+
+  padding: 10px 8px;
+}
+
 .button {
   background-color: var(--green);
   color: var(--white);
@@ -44,6 +54,10 @@ body {
   background-color: var(--primary);
   color: var(--white);
   border: 1px solid var(--primary);
+}
+.button-secondary {
+  color: var(--light-foreground);
+  background-color: var(--light);
 }
 
 .field {
@@ -68,6 +82,60 @@ body {
   padding-top: 80px;
 }
 
+.button-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid var(--less-light);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-icon.active {
+  background-color: var(--green);
+  border: 1px solid var(--light);
+}
+.button-icon:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+}
+.button-icon.active:before {
+  background: url(/img/icons/cart/mark.svg) no-repeat center;
+}
+.button-icon.minus:before {
+  background: url(/img/icons/cart/minus.svg) no-repeat center;
+}
+
+.switch {
+  width: 46px;
+  height: 24px;
+  border-radius: 49px;
+  background-color: var(--gray);
+  position: relative;
+}
+.switch:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  top: 2px;
+  position: absolute;
+  border-radius: 50%;
+  border-width: 0.5px;
+  background-color: var(--white);
+  transition: all 0.3s;
+  box-shadow: 1px 2px 4px 0px #0000001a;
+}
+.switch.active {
+  background-color: var(--green);
+}
+.switch.active:before {
+  left: 24px;
+}
+
 .catalog {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -86,9 +154,3 @@ body {
   bottom: 10px;
   left: 10px;
 }
-
-/* 
-<div class="product-image-wrapper">
-<img />
-<div class="discount" />
-</div> */

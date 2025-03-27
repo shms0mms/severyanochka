@@ -1,6 +1,6 @@
-import { initializeSpollers } from "./spoller.js"
-import { initializeTabs } from "./tabs.js"
+import { initializeSpollers } from "./spoller.js";
+import { initializeTabs } from "./tabs.js";
 
 // Инициализируем примитивы
-initializeSpollers()
-initializeTabs()
+initializeSpollers();
+initializeTabs();

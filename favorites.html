@@ -215,13 +215,26 @@
                   </div>
                 </div>
                 <div class="filters-form__field">
-                  <button class="filters-form__filter">Молоко</button>
-                  <div class="filters-form__filter">Сливки</div>
-                  <div class="filters-form__filter">Яйцо</div>
+                  <button class="filters-form__filter" type="button">
+                    Молоко
+                  </button>
+                  <button class="filters-form__filter" type="button">
+                    Сливки
+                  </button>
+                  <button class="filters-form__filter" type="button">
+                    Яйцо
+                  </button>
                 </div>
                 <div class="filters-form__field">
                   <div class="filters-form__label">
-                    <div class="switch"></div>
+                    <div class="switch" data-switch>
+                      <div class="switch__input" data-switch-input>
+                        <input type="switch" checked />
+                      </div>
+                      <div class="switch__content-wrapper">
+                        <div class="switch__icon" data-switch-icon></div>
+                      </div>
+                    </div>
                     <label>В наличии</label>
                   </div>
                 </div>

@@ -1,0 +1,32 @@
+.switch__input {
+  display: hidden;
+}
+
+.switch__content-wrapper {
+  width: 46px;
+  height: 24px;
+  border-radius: 49px;
+  background-color: var(--gray);
+  position: relative;
+}
+.switch__content-wrapper:has(.switch__icon.active) {
+  background-color: var(--green);
+}
+
+.switch__icon:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  top: 2px;
+  position: absolute;
+  border-radius: 50%;
+  border-width: 0.5px;
+  background-color: var(--white);
+  transition: all 0.3s;
+  box-shadow: 1px 2px 4px 0px #0000001a;
+}
+
+.switch__icon.active:after {
+  left: 24px;
+}

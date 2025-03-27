@@ -53,3 +53,9 @@
 .filters-form__range {
   margin-top: 20px;
 }
+
+.filters-form__filter {
+  width: 100%;
+  padding: 18px 0px;
+  text-align: left;
+}

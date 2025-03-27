@@ -59,6 +59,10 @@ body {
   color: var(--light-foreground);
   background-color: var(--light);
 }
+.button-submit {
+  color: white;
+  background-color: var(--primary);
+}
 
 .field {
   border: 1px solid var(--green);

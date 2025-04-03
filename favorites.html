@@ -14,10 +14,6 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/favorites.css" />
 
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/range-slider-input@2.4/dist/rangeslider.umd.min.js"
-    ></script>
     <title>Избранное</title>
   </head>
   <body>
@@ -203,21 +199,43 @@
                   <div class="filters-form__item">
                     <div class="filters-form__range-inputs">
                       <input
-                        id="filters-min-price-input"
-                        class="input"
+                        id="fromInput"
                         name="price_from"
-                        type="text"
+                        class="input"
+                        type="number"
+                        value="1"
+                        min="1"
+                        max="10000"
                       />
                       <span> - </span>
-
                       <input
-                        id="filters-max-price-input"
+                        id="toInput"
                         name="price_to"
                         class="input"
-                        type="text"
+                        type="number"
+                        value="10000"
+                        min="1"
+                        max="10000"
                       />
                     </div>
-                    <div id="filters-range" class="filters-form__range"></div>
+                    <div id="filters-range" class="filters-form__range">
+                      <input
+                        id="fromSlider"
+                        class="favorites-form__price-from"
+                        type="range"
+                        value="1"
+                        min="1"
+                        max="10000"
+                      />
+                      <input
+                        id="toSlider"
+                        class="favorites-form__price-to"
+                        type="range"
+                        value="10000"
+                        min="1"
+                        max="10000"
+                      />
+                    </div>
                   </div>
                 </div>
                 <div class="filters-form__field">

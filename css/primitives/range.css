@@ -1,10 +1,36 @@
-.range-slider {
-  background-color: var(--light);
-}
-.range-slider .range-slider__range {
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: all;
+  width: 24px;
+  height: 24px;
   background-color: var(--green);
-}
-.range-slider .range-slider__thumb {
-  background-color: var(--green);
+  border-radius: 50%;
+  cursor: pointer;
   border: 1px solid white;
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  pointer-events: all;
+  width: 24px;
+  height: 24px;
+  background-color: var(--green);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  background-color: var(--light);
+  pointer-events: none;
+}
+
+#fromSlider {
+  height: 0;
+  z-index: 1;
 }

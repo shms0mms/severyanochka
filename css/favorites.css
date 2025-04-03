@@ -52,6 +52,7 @@
 
 .filters-form__range {
   margin-top: 20px;
+  position: relative;
 }
 
 .filters-form__filter {

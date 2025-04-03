@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/favorites.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/range-slider-input@2.4/dist/rangeslider.umd.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/range-slider-input@2.4/dist/rangeslider.umd.min.js"
+    ></script>
     <title>Избранное</title>
   </head>
   <body>
@@ -184,16 +187,17 @@
           <div class="favorites__content">
             <div class="favorites__filters filters">
               <h3 class="filters__title">Фильтр</h3>
-              <form action="#" class="filters__form filters-form">
+              <form method="get" action="#" class="filters__form filters-form">
                 <div class="filters-form__field">
                   <div class="filters-form__label">
                     <label>Цена</label>
 
-                    <button
+                    <a
+                      href="?"
                       class="filters-form__clear-button button button-secondary"
                     >
                       Очистить
-                    </button>
+                    </a>
                   </div>
 
                   <div class="filters-form__item">
@@ -201,11 +205,14 @@
                       <input
                         id="filters-min-price-input"
                         class="input"
+                        name="price_from"
                         type="text"
                       />
                       <span> - </span>
+
                       <input
                         id="filters-max-price-input"
+                        name="price_to"
                         class="input"
                         type="text"
                       />
@@ -228,7 +235,7 @@
                   <div class="filters-form__label">
                     <div class="switch" data-switch>
                       <div class="switch__input" data-switch-input>
-                        <input type="checkbox" checked />
+                        <input name="stock" type="checkbox" checked />
                       </div>
                       <div class="switch__content-wrapper">
                         <div class="switch__icon" data-switch-icon></div>
